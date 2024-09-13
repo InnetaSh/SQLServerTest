@@ -12,11 +12,11 @@ namespace ConsoleApp10
             //using (SqlConnection connection = new SqlConnection(connectionString))
             //{
 
-            //    await connection.OpenAsync(); 
+            //    await connection.OpenAsync();
 
             //    SqlCommand command = new SqlCommand();
 
-            //    command.CommandText = "CREATE DATABASE LessonsSql";
+            //    command.CommandText = "CREATE DATABASE OnlineStore";
 
             //    command.Connection = connection;
 
@@ -28,30 +28,9 @@ namespace ConsoleApp10
 
 
 
-            //string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
-            //string sqlQuery = "CREATE TABLE Users (Id INT PRIMARY KEY IDENTITY, Name NVARCHAR(40) NOT NULL, Age INT NOT NULL)";
-
-
-            //using (SqlConnection connection = new SqlConnection(connectionString))
-            //{
-
-            //    await connection.OpenAsync(); 
-
-            //    SqlCommand command = new SqlCommand();
-
-            //    command.CommandText = sqlQuery;
-
-            //    command.Connection = connection;
-
-            //    await command.ExecuteNonQueryAsync();
-            //    Console.WriteLine("Table created");
-
-
-            //}
 
             //string sqlQuery_Products = "CREATE TABLE Products (ProductId  INT PRIMARY KEY IDENTITY, Name NVARCHAR(40) NOT NULL, Description NVARCHAR(40) NOT NULL,Price DECIMAL(10,2) DEFAULT 0 ,Stock INT)";
             //await ExecuteCommand(sqlQuery_Products);
-
 
 
             //string sqlQuery_Categories = "CREATE TABLE Categories (CategoryId INT PRIMARY KEY IDENTITY, CategoryName  NVARCHAR(40) NOT NULL)";
@@ -87,8 +66,8 @@ namespace ConsoleApp10
 
 
 
-            //-----------------------------------------------------------
-            //Реализуй метод для привязки категорий к продуктам в таблице ProductCategories
+            ////-----------------------------------------------------------
+            ////Реализуй метод для привязки категорий к продуктам в таблице ProductCategories
 
             //string sqlExpressionCategory = "INSERT INTO ProductCategories (ProductId, CategoryId) VALUES ((SELECT TOP 1 ProductId FROM Products WHERE Name = 'Iphone 15'), (SELECT CategoryId FROM Categories  WHERE CategoryName = 'phone'))";
             //await Command_Category(sqlExpressionCategory);
@@ -118,8 +97,8 @@ namespace ConsoleApp10
 
 
 
-            //-----------------------------------------------------------
-            //Реализуй метод для изменения количества товара на складе
+            ////-----------------------------------------------------------
+            ////Реализуй метод для изменения количества товара на складе
 
             //string sqlExpressionUPDATE_Stock = "UPDATE Products SET Stock = 25 WHERE Stock < 10";
             //await Command_UDATE_Stock(sqlExpressionUPDATE_Stock);
@@ -161,10 +140,10 @@ namespace ConsoleApp10
 
 
 
-            //В базе данных создайте таблицы
-            static async Task ExecuteCommand(string sqlQuery)
+        //В базе данных создайте таблицы
+        static async Task ExecuteCommand(string sqlQuery)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -189,7 +168,7 @@ namespace ConsoleApp10
 
             static async Task Command_ADD_VALUES(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -214,7 +193,7 @@ namespace ConsoleApp10
 
             static async Task Command_ADD_CATEGORY(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -237,7 +216,7 @@ namespace ConsoleApp10
 
             static async Task Command_Category(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -264,7 +243,7 @@ namespace ConsoleApp10
 
             static async Task Command_UDATE_PRICE(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -288,7 +267,7 @@ namespace ConsoleApp10
 
             static async Task Command_UDATE_Stock(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -312,7 +291,7 @@ namespace ConsoleApp10
 
             static async Task Command_DELETE_Products(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -336,7 +315,7 @@ namespace ConsoleApp10
 
             static async Task Command_DELETE_Categories(string sqlExpression_1, string sqlExpression_2)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -358,7 +337,7 @@ namespace ConsoleApp10
 
             static async Task Command_UPDATE_Description(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
@@ -382,7 +361,7 @@ namespace ConsoleApp10
 
             static async Task Command_UPDATE_CategoryId(string sqlExpression)
             {
-                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = LessonsSql; Trusted_Connection=True; TrustServerCertificate = True";
+                string connectionString = @"Data Source = DESKTOP-ITRLGSN; Initial Catalog = OnlineStore; Trusted_Connection=True; TrustServerCertificate = True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
 
